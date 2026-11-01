@@ -1,0 +1,31 @@
+{
+  "command": "python scripts/release.py",
+  "appSha256": "65b2824d834b1da21fb4f5f3235928f4bb36eac323eb8b3b750091ef64880542",
+  "artifacts": [
+    {
+      "artifact": "pencil-transactions-web-0.1.0.zip",
+      "bytes": 143488,
+      "sha256": "21451c11eee5749c7cf70a38bc928b3b101a7ac06bd75ae71c8ff43c9c06ae0a",
+      "entries": 14,
+      "crc": "pass",
+      "bundledAppMatchesBuild": true
+    },
+    {
+      "artifact": "pencil-transactions-source-0.1.0.zip",
+      "bytes": 180785,
+      "sha256": "2ce49b9049965add90984c0377c2c1980ef5661433bc7ad94ed553d274506f25",
+      "entries": 33,
+      "crc": "pass",
+      "bundledAppMatchesBuild": true
+    },
+    {
+      "artifact": "PencilTransactions-0.1.0-win-x64.zip",
+      "bytes": 158251205,
+      "sha256": "ceabc7a056b2658c6c6ee17630a8baf393c27a0a97954b6beb3d1b172a99d918",
+      "entries": 90,
+      "crc": "pass",
+      "bundledAppMatchesBuild": true
+    }
+  ],
+  "scope": "ZIP CRC/path/privacy, bundled code equality and runtime notices; real engine compatibility not tested."
+}

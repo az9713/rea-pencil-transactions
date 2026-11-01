@@ -1,0 +1,20 @@
+{
+  "name": "Pen Transactions",
+  "executable": "PencilTransactions",
+  "version": "0.1.0",
+  "entry": "app.html",
+  "testSelector": "#queue-op",
+  "docs_files": [
+    "app.html",
+    "app.css",
+    "app.js",
+    "index.html",
+    "site.css",
+    "sources.json",
+    "verification.json",
+    "browser-verification.json",
+    "workbench-desktop.png",
+    "workbench-mobile.png",
+    "desktop-verification.json"
+  ]
+}

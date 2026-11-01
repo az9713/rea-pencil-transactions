@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-11-01T05:23:11.4667283Z",
+  "realPencilEngineVerified": false,
+  "limit": "Actual packaged Electron renderer/control/Node-isolation smoke; application behavior separately tested in Chromium with synthetic documents.",
+  "exitCode": 0,
+  "result": {
+    "passed": true,
+    "app": "Pen Transactions",
+    "renderer": {
+      "title": "Pen Transactions — workbench",
+      "heading": "Make the change.Keep the proof.",
+      "node": "undefined",
+      "selector": true
+    },
+    "scope": "Packaged renderer load and isolation smoke; app-specific core/browser tests separate"
+  },
+  "command": "REA_PROFILE_DIR=<project>/.test-build/desktop-profile-final PencilTransactions.exe --self-test",
+  "electronFileVersion": "45.2.1",
+  "appSha256": "65b2824d834b1da21fb4f5f3235928f4bb36eac323eb8b3b750091ef64880542"
+}

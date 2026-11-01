@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-11-01T06:47:38.881Z",
+  "command": "npm run build && npm test (with explicit project --prefix)",
+  "tests": 25,
+  "passed": 25,
+  "failed": 0,
+  "exitCode": 0,
+  "appSha256": "65b2824d834b1da21fb4f5f3235928f4bb36eac323eb8b3b750091ef64880542",
+  "authority": "Independent core/security/replay tests; includes fresh-process manifest replay with synthetic .pen2.21-shaped fixture.",
+  "realPencilEngineVerified": false,
+  "limits": "Public-schema subset only, no official MCP/CLI transaction grammar, engine rendering or real-file roundtrip claimed."
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pen-transaction-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "test:browser": "node scripts/browser-test.mjs",
+    "release": "node scripts/build.mjs && node scripts/test.mjs && python scripts/release.py"
+  },
+  "devDependencies": {
+    "electron": "45.2.1",
+    "esbuild": "0.28.2",
+    "playwright": "1.58.2"
+  },
+  "dependencies": {}
+}

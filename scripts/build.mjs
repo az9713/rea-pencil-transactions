@@ -1,0 +1,2 @@
+import {build} from 'esbuild';import {mkdir,writeFile} from 'node:fs/promises';import {fixture} from '../src/fixture.mjs';
+await mkdir('docs',{recursive:true});await mkdir('fixtures',{recursive:true});await build({entryPoints:['src/app.mjs'],outfile:'docs/app.js',bundle:true,format:'iife',platform:'browser',target:'es2022',legalComments:'none'});await writeFile('fixtures/research-baseline.pen',JSON.stringify(fixture,null,2)+'\n');console.log('Built external browser bundle and synthetic .pen fixture.');

@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-11-01T05:22:05.082Z",
+  "authority": "Actual Chromium UI/download/reimport/offline launch tests with invented .pen2.21-shaped data, not an official Pencil engine test",
+  "browser": "156.0.8078.4",
+  "passed": [
+    "Synthetic .pen2.21 document initializes with nine unique nodes and a canonical checkpoint.",
+    "Two sequential guarded operations stage visibly with exact before/after object values while the committed checkpoint remains unchanged.",
+    "Atomic commit records one transaction with object differential and a changed checkpoint.",
+    "Real native project download retains exact baseline, opaque script payload and both operations.",
+    "Undo state and redo future survive actual native download/reimport and replay to the identical tip.",
+    "Downloaded manifest replays against the downloaded exact original baseline in the UI.",
+    "Wrong-baseline manifest is refused without replacing the loaded project.",
+    "Prototype-key import fails closed without changing the checkpoint.",
+    "Untrusted text/opaque name is inert SVG text; no HTML/script/image elements execute or load.",
+    "Actual desktop/mobile screenshots captured;390px layout has no horizontal overflow.",
+    "No page JavaScript errors or off-origin network requests, including scriptUri.",
+    "Standalone file:// app initializes hashing and wireframe without a web server."
+  ],
+  "errors": [],
+  "screenshots": [
+    "workbench-desktop.png",
+    "workbench-mobile.png"
+  ]
+}

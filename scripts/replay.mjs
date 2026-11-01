@@ -1,0 +1,7 @@
+// Functional source CLI. All input/output paths must remain inside this project.
+import path from 'node:path';import {fileURLToPath} from 'node:url';import {readFile,writeFile,realpath,stat} from 'node:fs/promises';import {parseJSON,replayManifest,penJSON} from '../src/core.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const args=process.argv.slice(2);if(args.length!==3)throw Error('Usage: node scripts/replay.mjs baseline.pen transactions.json output.pen (project-local paths)');
+function inside(file){const p=path.resolve(root,file);if(!p.startsWith(root+path.sep))throw Error('Path escapes project.');return p;}
+const [baselineFile,manifestFile,out]=args.map(inside);for(const file of [baselineFile,manifestFile]){if(!(await realpath(file)).startsWith(root+path.sep))throw Error('Symlink escapes project.');if((await stat(file)).size>5*1024*1024)throw Error('Input exceeds5 MiB.');}if(!(await realpath(path.dirname(out))).startsWith(root+path.sep)&&path.dirname(out)!==root)throw Error('Output parent escapes project.');
+// Refuse accidental overwrite: a replay produces a reviewable separate artifact.
+const baseline=parseJSON(await readFile(baselineFile,'utf8')),record=parseJSON(await readFile(manifestFile,'utf8'));const result=await replayManifest(baseline,record);await writeFile(out,penJSON(result.document),{flag:'wx'});console.log(JSON.stringify({checkpoint:result.project.checkpoint,cursor:result.project.cursor,transactions:result.project.history.length,output:path.relative(root,out)}));

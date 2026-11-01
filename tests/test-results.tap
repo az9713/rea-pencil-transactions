@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: public-schema2.21 strict JSON subset preserves unknown fields and every tree ID
+ok 1 - public-schema2.21 strict JSON subset preserves unknown fields and every tree ID
+  ---
+  duration_ms: 13.9457
+  type: 'test'
+  ...
+# Subtest: canonical checkpoint ignores key order but detects every value/array-order change
+ok 2 - canonical checkpoint ignores key order but detects every value/array-order change
+  ---
+  duration_ms: 1.3817
+  type: 'test'
+  ...
+# Subtest: rename changes display name only, preserving IDs, unknown values and original baseline
+ok 3 - rename changes display name only, preserving IDs, unknown values and original baseline
+  ---
+  duration_ms: 7.2904
+  type: 'test'
+  ...
+# Subtest: set property captures before/after values and refuses IDs/references/unknown property writes
+ok 4 - set property captures before/after values and refuses IDs/references/unknown property writes
+  ---
+  duration_ms: 16.7564
+  type: 'test'
+  ...
+# Subtest: atomic multi-operation batch failure leaves source document and history untouched
+ok 5 - atomic multi-operation batch failure leaves source document and history untouched
+  ---
+  duration_ms: 3.6603
+  type: 'test'
+  ...
+# Subtest: sequential object guards support valid multi-operation changes on one target
+ok 6 - sequential object guards support valid multi-operation changes on one target
+  ---
+  duration_ms: 3.5395
+  type: 'test'
+  ...
+# Subtest: stale document, target and destination guards refuse instead of rebasing
+ok 7 - stale document, target and destination guards refuse instead of rebasing
+  ---
+  duration_ms: 3.8213
+  type: 'test'
+  ...
+# Subtest: move preserves local coordinates and IDs, records parent and child-order differentials
+ok 8 - move preserves local coordinates and IDs, records parent and child-order differentials
+  ---
+  duration_ms: 6.2162
+  type: 'test'
+  ...
+# Subtest: same-parent reorder uses index after removal; invalid indexes and cycles fail atomically
+ok 9 - same-parent reorder uses index after removal; invalid indexes and cycles fail atomically
+  ---
+  duration_ms: 4.304
+  type: 'test'
+  ...
+# Subtest: unsupported operations, opaque nodes, reusable nodes and flex-coordinate edits refuse
+ok 10 - unsupported operations, opaque nodes, reusable nodes and flex-coordinate edits refuse
+  ---
+  duration_ms: 2.4313
+  type: 'test'
+  ...
+# Subtest: duplicate IDs including opaque descendants are rejected as ambiguous
+ok 11 - duplicate IDs including opaque descendants are rejected as ambiguous
+  ---
+  duration_ms: 0.454
+  type: 'test'
+  ...
+# Subtest: unknown fields and opaque scripts never flatten or execute during export/reload
+ok 12 - unknown fields and opaque scripts never flatten or execute during export/reload
+  ---
+  duration_ms: 4.3456
+  type: 'test'
+  ...
+# Subtest: durable undo/redo survives native project reload and replays exact checkpoints
+ok 13 - durable undo/redo survives native project reload and replays exact checkpoints
+  ---
+  duration_ms: 23.5399
+  type: 'test'
+  ...
+# Subtest: committing after undo deliberately branches, dropping only the redo future
+ok 14 - committing after undo deliberately branches, dropping only the redo future
+  ---
+  duration_ms: 20.0625
+  type: 'test'
+  ...
+# Subtest: record hashes, object diff, checkpoint and inactive redo records are verified
+ok 15 - record hashes, object diff, checkpoint and inactive redo records are verified
+  ---
+  duration_ms: 9.7442
+  type: 'test'
+  ...
+# Subtest: manifest replays only against exact canonical baseline and validates its SHA
+ok 16 - manifest replays only against exact canonical baseline and validates its SHA
+  ---
+  duration_ms: 8.2367
+  type: 'test'
+  ...
+# Subtest: fresh Node process deterministically replays exported baseline + manifest
+ok 17 - fresh Node process deterministically replays exported baseline + manifest
+  ---
+  duration_ms: 1352.2437
+  type: 'test'
+  ...
+# Subtest: strict JSON parser refuses prototype keys, duplicates, invalid Unicode, unsafe numbers and comments
+ok 18 - strict JSON parser refuses prototype keys, duplicates, invalid Unicode, unsafe numbers and comments
+  ---
+  duration_ms: 0.5452
+  type: 'test'
+  ...
+# Subtest: schema/version/resource bounds reject unsupported input without an upgrade
+ok 19 - schema/version/resource bounds reject unsupported input without an upgrade
+  ---
+  duration_ms: 9.266
+  type: 'test'
+  ...
+# Subtest: op bounds and no-op transactions are refused; no partial changes escape
+ok 20 - op bounds and no-op transactions are refused; no partial changes escape
+  ---
+  duration_ms: 2.8776
+  type: 'test'
+  ...
+# Subtest: preview makes opaque/variable/flex/text/unknown fields explicit and never fetches assets
+ok 21 - preview makes opaque/variable/flex/text/unknown fields explicit and never fetches assets
+  ---
+  duration_ms: 1.0533
+  type: 'test'
+  ...
+# Subtest: unknown project/manifest/operation fields refuse instead of being silently dropped
+ok 22 - unknown project/manifest/operation fields refuse instead of being silently dropped
+  ---
+  duration_ms: 1.3521
+  type: 'test'
+  ...
+# Subtest: history cap and per-batch operation bounds refuse without discarding previous records
+ok 23 - history cap and per-batch operation bounds refuse without discarding previous records
+  ---
+  duration_ms: 1.6768
+  type: 'test'
+  ...
+# Subtest: wireframe bounds long/malformed content without altering native values
+ok 24 - wireframe bounds long/malformed content without altering native values
+  ---
+  duration_ms: 0.5545
+  type: 'test'
+  ...
+# Subtest: canonical-equivalent reordered object keys replay the identical multi-property diff
+ok 25 - canonical-equivalent reordered object keys replay the identical multi-property diff
+  ---
+  duration_ms: 9.8648
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2605.6788
