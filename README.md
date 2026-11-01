@@ -1,10 +1,20 @@
 # Pen Transactions
 
-**Stage a change, inspect its differential, and replay it from the same baseline.**
+Try a few simple changes to a design file, compare rough before-and-after diagrams, and apply the group only when its checks pass. The saved project keeps the starting design and an undoable record of those changes.
 
-[Live workbench](https://az9713.github.io/rea-pencil-transactions/app.html) · [Feature showcase](https://az9713.github.io/rea-pencil-transactions/) · [Windows / web / source releases](https://github.com/az9713/rea-pencil-transactions/releases/tag/v0.1.0)
+An automated design edit might rename the wrong object, move something into the wrong frame or overwrite a setting. A final picture alone does not explain which objects changed. You want a review step and a record you can undo later.
+
+**Example:** Select a supported frame, stage a new display name, then stage another supported change. Inspect the object list and rough previews before applying the group. If an object no longer matches the state the edit expected, the whole group is refused rather than partly applied.
+
+**What you install:** A separate design-file workbench with a Windows app and browser version.
+
+**Current scope:** This handles a limited part of the .pen 2.21 format. Its previews are simple outlines, not Pencil's finished rendering. Reopening the result in the real Pencil app has not been verified.
+
+[Live guide](https://az9713.github.io/rea-pencil-transactions/) · [Download packages](https://github.com/az9713/rea-pencil-transactions/releases/tag/v0.1.0)
 
 ![Actual Chromium workbench with a staged synthetic transaction](https://az9713.github.io/rea-pencil-transactions/workbench-desktop.png)
+
+
 
 ## Useful behavior
 
