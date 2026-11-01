@@ -20,7 +20,7 @@ def within(p,base):
 
 def main():
  standalone=(ROOT/'electron-app.json').is_file()
- slug=ROOT.name if standalone else sys.argv[1]
+ slug=json.loads((ROOT/'package.json').read_text(encoding='utf-8-sig'))['name'] if standalone else sys.argv[1]
  if not re.fullmatch('[a-z0-9-]+',slug):raise ValueError('Invalid project slug')
  project=ROOT if standalone else within(ROOT/'projects'/slug,ROOT/'projects')
  config=json.loads((project/'electron-app.json').read_text(encoding='utf-8-sig'))
