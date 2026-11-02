@@ -12,6 +12,18 @@ An automated design edit might rename the wrong object, move something into the 
 
 [Live guide](https://az9713.github.io/rea-pencil-transactions/) · [Download packages](https://github.com/az9713/rea-pencil-transactions/releases/tag/v0.1.0)
 
+<!-- rea-release-expectations:start -->
+## What to expect from this release
+
+**Status: experimental.** Read the tested scope and remaining work below before choosing this release for your workflow.
+
+- **What you get:** A standalone Windows/browser editor for a limited part of the .pen 2.21 format. Staging, rough previews and undo history live in this tool, outside Pencil.
+- **Verified so far:** Supported rename, property and move edits, grouped-change checks, undo/redo and repeat edits were tested with fixtures, the browser and packaged app.
+- **Still needs testing or implementation:** Reopening edited files in the real Pencil app and comparing its rendered result remain unverified.
+- **Relationship to the original app:** Installing it adds no controls to Pencil. The previews are simple outlines. A workflow inside Pencil and reliable exchange of broader documents would require additional host and format integration work.
+
+<!-- rea-release-expectations:end -->
+
 ![Actual Chromium workbench with a staged synthetic transaction](https://az9713.github.io/rea-pencil-transactions/workbench-desktop.png)
 
 
